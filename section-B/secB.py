@@ -4,7 +4,10 @@ from fastapi import FastAPI, HTTPException
 import httpx
 import uvicorn
 import os
-from dotenv import load
+from dotenv import load_dotenv
+
+load_dotenv()
+
 app = FastAPI()
 SERVICE_A_URL = os.getenv("API_URL")
 
