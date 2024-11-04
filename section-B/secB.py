@@ -3,9 +3,10 @@
 from fastapi import FastAPI, HTTPException
 import httpx
 import uvicorn
-
+import os
+from dotenv import load
 app = FastAPI()
-SERVICE_A_URL = "http://localhost:8000/users"
+SERVICE_A_URL = os.getenv("API_URL")
 
 @app.get("/process-user/{user_id}")
 async def process_user(user_id: int):
