@@ -1,0 +1,10 @@
+apiVersion: core.choreo.dev/v1beta1
+kind: ComponentConfig
+spec:
+ outbound:
+  serviceReferences:
+   - name: choreo:///graphworld/zeniagraph/seca/be2b5/v1/PROJECT
+     connectionConfig: 01ef9aad-3fab-1866-96a8-bbd892714108
+     env:
+      - from: ServiceURL
+        to: API_URL
