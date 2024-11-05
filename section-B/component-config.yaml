@@ -7,4 +7,4 @@ spec:
      connectionConfig: 01ef9aad-3fab-1866-96a8-bbd892714108
      env:
       - from: ServiceURL
-        to: API_URL
+        to: SERVICE_A_URL

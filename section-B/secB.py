@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = FastAPI()
-SERVICE_A_URL = os.getenv("API_URL")
+SERVICE_A_URL = os.getenv("SERVICE_A_URL")
 
 @app.get("/process-user/{user_id}")
 async def process_user(user_id: int):
