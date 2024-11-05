@@ -14,7 +14,9 @@ SERVICE_A_URL = os.getenv("SERVICE_A_URL")
 @app.get("/process-user/{user_id}")
 async def process_user(user_id: int):
     async with httpx.AsyncClient() as client:
+        print(f"this is service url  - {SERVICE_A_URL}")
         response = await client.get(f"{SERVICE_A_URL}/{user_id}")
+
         if response.status_code == 200:
             user_data = response.json()
             # Process user data (dummy example)
